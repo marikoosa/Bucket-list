@@ -11,10 +11,10 @@
         <input type="text" placeholder="Description" name="description">
 
         <label for="date-completed"><strong>Date Completed</strong></label>
-        <input type="date" placeholder="Date Completed" name="date-completed"></br>
+        <input type="date" placeholder="Date Completed" name="date-completed">
 
         <label for="avatar"><strong>Upload a picture:</strong></label>
-        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"></br>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
 
         <label for="public-list"><strong>Make list public</strong></label>
         <input type="checkbox" name="public" id="make-public" value="1"></br>
