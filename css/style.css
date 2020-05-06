@@ -1,0 +1,573 @@
+/* CSS file organization
+  1. General styles
+  2. navbar
+  3. home page
+  4. login, registration, myaccount, resetpassword pages.
+  5. addlist, bucketlist, publiclist pages
+  6. additem, edititem modal windows
+  7. passstrength plugin */
+
+* {
+  margin: 0px;
+}
+
+body{
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  color:#fff;
+  text-align: center;
+}
+
+h2{
+  font-size: 30px;
+}
+
+/* Navbar styles */
+/* Positioning the navbar container inside the image div */
+.nav-container {
+  overflow: hidden;
+  padding: 20px;
+}
+
+.navbar {
+  overflow: hidden;
+  float: right;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  color:#fff;
+  font-size: 1.32em;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* When navbar links are hovered over*/
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Background Image style for index.php */
+ .home-img {
+   background-image: url("../img/home1.jpg");/* The image used */
+   min-height: 1100px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+ }
+
+/* ---- h1 Letters animation on index.php------- */
+/* parts of the code is taken from
+ https://css-tricks.com/snippets/css/typewriter-effect/  */
+
+.quote{
+   width: 20em; /*The width of the header sentence*/
+   border-right: 2px solid rgba(255,255,255,.75);
+   font-size: 3em;
+   white-space: nowrap;
+   overflow: hidden;
+   transform: translateY(-50%);
+}
+
+/* Animation  */
+.typewriter{
+ animation: typewriter 2s steps(44) 1s 1 normal both,
+ blinkTextCursor 500ms steps(44) infinite normal;
+ margin: 400px;
+}
+
+@keyframes typewriter{
+ from{width: 0;}
+ to{width: 17em;}
+}
+
+@keyframes blinkTextCursor{
+ from{border-right-color: rgba(255,255,255,.75);}
+ to{border-right-color: transparent;}
+}
+
+/* Login registration and My account forms */
+
+/* Background image style for login.php, myaccount.php,
+registration.php resetpassword.php */
+.login-img{
+  background-image: url("../img/login.jpg");/* The image used */
+  min-height: 1200px;
+  /* Center and scale the image*/
+  background-position: center;
+  background-size: cover;
+  position: relative;/* Needed to position the navbar */
+}
+
+/* Placing the form windows on the page */
+.login-container{
+  padding: 190px;
+}
+.reg-container{
+  padding: 100px;
+}
+.account-container{
+  padding: 100px;
+}
+
+/* header for the login & registration & myaccount form */
+ .login-form h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #50613E;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.login-form {
+    background: #fff;
+    /* width: 450px; */
+    border-radius: 6px;
+    margin: 0 auto;
+    display: table;
+    padding: 40px 65px 65px;
+    box-sizing: border-box;
+}
+
+/* form fields */
+.form-group {
+  width: 100%;
+  margin: 0 0 15px;
+  position: relative;
+
+}
+/* input fields */
+.login-form input {
+    width: 100%;
+    padding: 5px;
+    height: 56px;
+    border-radius: 65px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding-left: 80px;
+    outline: none;
+}
+
+/* input icons */
+.login-form .form-group .input-icon {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    height: 100%;
+    padding-left: 30px;
+    color: #666;
+    text-align: center;
+}
+
+/* Login, Logout, Save, register buttons */
+.btn-container{
+  padding: 15px;
+}
+
+.login-form button:hover{
+  opacity: 0.9;
+}
+.login-form .login-btn {
+  background:  #253316;
+  padding: 11px 50px;
+  border-color: #45aba6;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+  border: 1px solid #849469;
+  border-radius: 44px;
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+}
+
+/* forgot your password text */
+.login-form .reset-psw {
+  float: left;
+  width: 100%;
+  text-decoration: none;
+  color: #415A37;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 11px;
+}
+
+/* remember me text and checkbox style */
+#rememberme{
+  width: 15px;
+  height: 15px;
+}
+
+.remember{
+  font-size: 14px;
+  text-align: center;
+  color: #415A37;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+/* addlist, bucketlist, publiclist styles */
+
+/* The background image for bucketlist.php publiclist.php, addlist.php*/
+.buck-img{
+  background-image: url("../img/about1.jpg");
+  min-height: 1400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* addlist.php  */
+.button-container{
+  background-color: white;
+   border: .6px solid #ccc;
+   border-radius: 6px;
+   /* padding-top: 400px; */
+   /* margin:3; */
+   width:550px;
+   height:150px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+}
+
+.addlist-container{
+     padding-top: 170px;
+}
+
+/* bucketlist.php, publiclists.php */
+/* White background surrounding the list items */
+.list-container{
+    background-color: white;
+     border: .6px solid #ccc;
+     border-radius: 6px;
+     padding:45px;
+     margin:0;
+     width:550px;
+     margin: 0 auto;
+}
+
+/* area surrounding elements of the list item  */
+.item-container{
+  padding-top: 11px;
+  width:550px;
+  display: inline-block;
+}
+
+.list-item{
+  border: .8px solid #ccc;
+  padding:13px;
+  border-radius: 12px;
+  display:flex;
+  background-color: #f2ede8;
+  color:#062323;
+  opacity: 0.8;
+  opacity: 0.9;
+}
+
+.item-img{
+  display:flex;
+  justify-content: flex-start;
+  flex-direction:column;
+}
+
+/* images uploaded by users */
+.bucket-image{
+  width: 170px;
+  height: 170px;
+}
+
+.buck-img h1{
+  padding: 35px;
+}
+
+.item-completion{
+  display:flex;
+  align-items:  center;
+  justify-content:   center;
+  padding:10px;
+  font-size: 13px;
+}
+
+/* list item completed - checkbox*/
+#item-complete{
+  width: 17px;
+  height: 17px;
+}
+/* styles for list item elements */
+.item-title{
+  display:flex;
+  flex-direction: row;
+  flex-flow: column;
+  padding:5px;
+  text-align:left;
+  color: #3c2e1a;
+  width:390px
+}
+/* title for bucket list items */
+.item-title h1{
+  color: #3c2e1a;
+  text-align:center;
+   padding:0px;
+   font-size: 20px;
+}
+/* text style for description and date completion fields */
+.item-title p{
+  font-size: 13px;
+  padding:10px;
+  border: .9px solid #ccc;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+/* list item description and date completed */
+.item-title span{
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px;
+}
+/* Font awesome icons to delete and edit list items*/
+.icons{
+  padding: 3px;
+  text-align: center;
+  font-size: 23px;
+}
+
+/* ------Modal Windows-----*/
+.additem-form{
+  font-size: 17px;
+}
+
+/* Checkbox styles in modal windows */
+#make-public, #completed{
+  height:20px;
+  width:20px;
+  border: .8px solid #ccc;
+}
+
+.modal-container{
+  padding: 90px;
+}
+
+/* input fields in modal windows */
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=checkbox]{
+  padding:10px;
+  margin: 8px;
+  font-size: 15px;
+}
+
+input[type=file]{
+  padding:7px;
+}
+
+input[type=date]{
+  padding:7px;
+  margin: 7px;
+}
+
+/* style for the button that opens addlistitem modal window */
+#modalbutton, #addlist-button{
+  background-color: grey;
+  color: white;
+  padding: 14px 20px;
+  margin: 0 200px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* buttons inside the modal windows */
+#addto-list, #edit-list{
+  background-color: grey;
+  color: white;
+  padding: 14px 20px;
+  border: .8px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+/* Center the image and position the close button */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal window for edit list item*/
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  border-radius: 6px;
+  width: 30%;
+  height: 45%;
+}
+
+/* Modal window for add list item */
+.modal-content-add {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border-radius: 6px;
+  width: 30%;
+  height:25%;
+}
+.modal-content-lucky{
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  border-radius: 6px;
+  width: 37%;
+  height: 30%;
+}
+/* Animation for the opening modal window */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Header in modal windows */
+#modal-header{
+  text-align: center;
+  font-size: 23px;
+  padding: 2px;
+  color:black;
+}
+
+/* The background image for about.php*/
+.about-img{
+  background-image: url("../img/about.jpg");
+  min-height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.about-container{
+  background-color: white;
+   border: .6px solid #ccc;
+   border-radius: 6px;
+   padding:45px;
+   margin:0;
+   width:550px;
+   margin: 0 auto;
+}
+
+/* Styles for passstrength plugin */
+.passtrengthMeter::after{
+  content: '';
+  height: 3px;
+  overflow: hidden;
+  width: 0%;
+  transition: width .5s;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.passtrengthMeter.weak::after{
+  background-color: #EC644B;
+  width: 25%;
+}
+
+.passtrengthMeter.medium::after{
+  content: '';
+  background-color: #E87E04;
+  width: 50%;
+}
+
+.passtrengthMeter.strong::after{
+  content: '';
+  background-color: #EFBF17;
+  width: 75%;
+}
+
+.passtrengthMeter.very-strong::after{
+  content: '';
+  background-color: #42A72A;
+  width: 100%;
+}
+
+.passtrengthMeter .tooltip {
+  background: #000000;
+  top: 100%;
+  color: #fff;
+  font-family:Arial;
+  font-size: 12px;
+  display: block;
+  left: 50%;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 5px 10px;
+  pointer-events: none;
+  position: absolute;
+  min-width: 70px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 10;
+  -webkit-transform: translateY(5px);
+     -moz-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+       -o-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
