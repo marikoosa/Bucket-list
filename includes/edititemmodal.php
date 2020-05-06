@@ -17,10 +17,10 @@
         <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
 
         <label for="public-list"><strong>Make list public</strong></label>
-        <input type="checkbox" name="public" id="make-public" value="1"></br>
+        <input type="checkbox" name="public" id="make-public" value="1">
 
         <label for="item-completed"><strong>Item is completed</strong></label>
-        <input type="checkbox" name="completed" id="completed" value="1"></br>
+        <input type="checkbox" name="completed" id="completed" value="1">
 
         <button type="submit" name="edititem" id="edit-list">Save changes</button>
       </div>
